@@ -37,10 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.6
 
   ltg_dashboard:
-    # path: ../
-    git:
-      url: git@github.com:Hung6129/ltg_dashboard.git
-      ref: main
+    path: ../
+    # git:
+    #   url: git@github.com:Hung6129/ltg_dashboard.git
+    #   ref: main
 
 dev_dependencies:
   flutter_test:

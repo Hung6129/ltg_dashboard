@@ -265,11 +265,9 @@ packages:
   ltg_dashboard:
     dependency: "direct main"
     description:
-      path: "."
-      ref: main
-      resolved-ref: e2aa2b25bb56582536468b35d8a9d056b53855af
-      url: "git@github.com:Hung6129/ltg_dashboard.git"
-    source: git
+      path: ".."
+      relative: true
+    source: path
     version: "0.0.1"
   matcher:
     dependency: transitive
