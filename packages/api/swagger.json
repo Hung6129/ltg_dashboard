@@ -1,0 +1,1084 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "LocTroi.MobileGateway - Dashboard API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/dashboard/getdashboarddata": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChartData"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChartData"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChartData"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/dashboard/list": {
+      "get": {
+        "tags": [
+          "Kpi"
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDashboard"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDashboard"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDashboard"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/dashboard/kpi1": {
+      "post": {
+        "tags": [
+          "Kpi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDienTichLienKetSanXuatInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDienTichLienKetSanXuatInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDienTichLienKetSanXuatInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDienTichLienKetSanXuat"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDienTichLienKetSanXuat"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDienTichLienKetSanXuat"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/dashboard/kpi2": {
+      "post": {
+        "tags": [
+          "Kpi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhThuVatTuNongNghiepInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhThuVatTuNongNghiepInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhThuVatTuNongNghiepInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhThuVatTuNongNghiep"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhThuVatTuNongNghiep"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhThuVatTuNongNghiep"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/dashboard/kpi3": {
+      "post": {
+        "tags": [
+          "Kpi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiNoQuaHanInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiNoQuaHanInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiNoQuaHanInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiNoQuaHan"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiNoQuaHan"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiNoQuaHan"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/dashboard/kpi4": {
+      "post": {
+        "tags": [
+          "Kpi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDienTichThuMuaInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDienTichThuMuaInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDienTichThuMuaInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDienTichThuMua"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDienTichThuMua"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDienTichThuMua"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/dashboard/kpi5": {
+      "post": {
+        "tags": [
+          "Kpi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhSoQuetAppInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhSoQuetAppInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhSoQuetAppInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhSoQuetApp"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhSoQuetApp"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhSoQuetApp"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/dashboard/kpi6": {
+      "post": {
+        "tags": [
+          "Kpi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhSoCoGioiHoaInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhSoCoGioiHoaInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/KpiDoanhSoCoGioiHoaInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestValue"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhSoCoGioiHoa"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhSoCoGioiHoa"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/KpiDoanhSoCoGioiHoa"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BadRequestValue": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32",
+            "default": 400
+          },
+          "message": {
+            "type": "string",
+            "default": "Nội dung thông báo lỗi",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChartData": {
+        "type": "object",
+        "properties": {
+          "chartType": {
+            "type": "string",
+            "nullable": true
+          },
+          "chartTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChartDataItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChartDataItem": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "xValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "xName": {
+            "type": "string",
+            "nullable": true
+          },
+          "xName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "xName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "xName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "xName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "yValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "yValue1": {
+            "type": "number",
+            "format": "double"
+          },
+          "yValue2": {
+            "type": "number",
+            "format": "double"
+          },
+          "yValue3": {
+            "type": "number",
+            "format": "double"
+          },
+          "yValue4": {
+            "type": "number",
+            "format": "double"
+          },
+          "yValue5": {
+            "type": "number",
+            "format": "double"
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "size": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IKpiData": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "KpiDashboard": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IKpiData"
+            },
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDienTichLienKetSanXuat": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "maMuaVu": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenMuaVu": {
+            "type": "string",
+            "nullable": true
+          },
+          "nam": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "keHoach": {
+            "type": "number",
+            "format": "double"
+          },
+          "thucTe": {
+            "type": "number",
+            "format": "double"
+          },
+          "hienHanh": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDienTichLienKetSanXuatInputDto": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "laToTruong3C": {
+            "type": "boolean"
+          },
+          "soMuaVu": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDienTichThuMua": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "maMuaVu": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenMuaVu": {
+            "type": "string",
+            "nullable": true
+          },
+		   "ngay": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "maCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "thucHien": {
+            "type": "number",
+            "format": "double"
+          },
+          "thuMua": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDienTichThuMuaInputDto": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "laToTruong3C": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDoanhSoCoGioiHoa": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "ngay": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "loaiDichVu": {
+            "type": "string",
+            "nullable": true
+          },
+          "keHoach": {
+            "type": "number",
+            "format": "double"
+          },
+          "thucTe": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDoanhSoCoGioiHoaInputDto": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "laToTruong3C": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDoanhSoQuetApp": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "ngay": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "keHoach": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "thucTe": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDoanhSoQuetAppInputDto": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "laToTruong3C": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDoanhThuVatTuNongNghiep": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "loaiHangHoa": {
+            "type": "string",
+            "nullable": true
+          },
+          "ngay": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "maCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "keHoach": {
+            "type": "number",
+            "format": "double"
+          },
+          "thucTe": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiDoanhThuVatTuNongNghiepInputDto": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "laToTruong3C": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiNoQuaHan": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "maMuaVu": {
+            "type": "string",
+            "nullable": true
+          },
+		   "loaiHangHoa": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenMuaVu": {
+            "type": "string",
+            "nullable": true
+          },
+          "maCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenCayTrong": {
+            "type": "string",
+            "nullable": true
+          },
+          "doanhThu": {
+            "type": "number",
+            "format": "double"
+          },
+          "no": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KpiNoQuaHanInputDto": {
+        "type": "object",
+        "properties": {
+          "maNhanVien3C": {
+            "type": "string",
+            "nullable": true
+          },
+          "laToTruong3C": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      }
+    },
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://gu-m-gw.loctroi.vn/auth/connect/authorize",
+            "tokenUrl": "https://gu-m-gw.loctroi.vn/auth/connect/token",
+            "scopes": {
+              "api": "Dashboard API"
+            }
+          }
+        }
+      },
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

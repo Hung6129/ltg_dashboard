@@ -1,0 +1,12 @@
+pubName: ltg_api
+pubVersion: 1.0.1
+pubDescription: "LTG Mobile API Library"
+pubHomepage: https://pub.ltg.app
+pubAuthor: LtgDev Team
+nullableFields: true
+
+
+# @Author: Your name
+# @Date:   2021-09-22 16:15:13
+# @Last Modified by:   Your name
+# @Last Modified time: 2021-10-02 13:49:33
