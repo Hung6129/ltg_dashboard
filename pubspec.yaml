@@ -24,11 +24,11 @@ dependencies:
 
     # loctroi api
   ltg_api:
-    path: packages/api
-    # git:
-    #   url: git@github.com:Hung6129/ltg_dashboard.git
-    #   ref: main
-    #   path: packages/api
+    # path: packages/api
+    git:
+      url: git@github.com:Hung6129/ltg_dashboard.git
+      ref: main
+      path: packages/api
   syncfusion_flutter_gauges: ^26.2.7
   meta: ^1.12.0
   logger: ^2.4.0
