@@ -5,7 +5,8 @@ homepage: app.loctroi.vn
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: '>=3.4.3 <4.0.0'
+  # sdk: '>=3.4.3 <4.0.0'
+  sdk: ">=2.17.3 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

@@ -256,16 +256,20 @@ packages:
   ltg_api:
     dependency: transitive
     description:
-      path: "../packages/api"
-      relative: true
-    source: path
+      path: "packages/api"
+      ref: main
+      resolved-ref: e2aa2b25bb56582536468b35d8a9d056b53855af
+      url: "git@github.com:Hung6129/ltg_dashboard.git"
+    source: git
     version: "1.0.1"
   ltg_dashboard:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: e2aa2b25bb56582536468b35d8a9d056b53855af
+      url: "git@github.com:Hung6129/ltg_dashboard.git"
+    source: git
     version: "0.0.1"
   matcher:
     dependency: transitive
